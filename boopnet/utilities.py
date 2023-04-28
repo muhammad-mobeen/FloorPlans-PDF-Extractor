@@ -117,7 +117,7 @@ def segmentation_model():
     Loads the U-net model from HDF5 file into a compiled Keras model.
     """
     return load_model(
-    "boopnet.hdf5",
+    "boopnet/boopnet.hdf5",
     compile=True,
     custom_objects={
         "dice_coef": dice_coef, 

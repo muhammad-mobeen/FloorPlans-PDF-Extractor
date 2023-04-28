@@ -153,4 +153,5 @@ cython_debug/
 
 
 # custom
-fp.pdf
+*.pdf
+Images/
