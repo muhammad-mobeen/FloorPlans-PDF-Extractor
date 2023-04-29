@@ -23,6 +23,7 @@ class PDF_to_Floor_Plans:
         self.pdf_path = pdf_path
         self.img_destination_folder = img_destination_folder
         self.fp_destination_folder = fp_destination_folder
+        # self.user_destination_folder = user_destination_folder
         self.dpi = dpi
 
     def dirManager(self, dir, mode=None):
@@ -110,14 +111,12 @@ class PDF_to_Floor_Plans:
 
         print("All Floor Plans Extracted Successfully!")
         
-
-class InbacPrompter:
-    def __init__(self):
-        inbac.main()
+    def prompt_user(self):
+        inbac.main(self.fp_destination_folder)
 
 
 if __name__ == '__main__':
-    # agent = PDF_to_Floor_Plans('fp.pdf', 300, 'Images', 'Model_Images')
+    agent = PDF_to_Floor_Plans('fp.pdf', 300, 'PDF_Images', 'Model_Images')
     # agent.pdf2images()
     # agent.detect_images()
-    inbac_agent = InbacPrompter()
+    agent.prompt_user()

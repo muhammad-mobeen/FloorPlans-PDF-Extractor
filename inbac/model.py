@@ -14,7 +14,7 @@ class Model():
         self.displayed_image: Optional[PhotoImage] = None
         self.canvas_image: Optional[Any] = None
         self.canvas_image_dimensions: Tuple[int, int] = (0, 0)
-        self.current_image: Optional[Image] = None
+        self.current_image: Optional[Image.Image] = None
         self.enabled_selection_mode: bool = False
         self.box_selected: bool = False
         self.current_file: int = 0

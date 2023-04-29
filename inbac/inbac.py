@@ -28,13 +28,16 @@ class Application():
         self.view.master.mainloop()
 
 
-def main():
+def main(input_dir=None):
     root = tk.Tk()
     root.title("inbac")
-    print('running')
-    # app = Application(parse_args.parse_arguments(), master=root)
+    args = parse_args.parse_arguments()
+    if input_dir: args.input_dir = input_dir
+    # if output_dir: args.output_dir = input_dir
 
-    # app.run()
+    app = Application(args, master=root)
+
+    app.run()
 
 
 if __name__ == "__main__":
