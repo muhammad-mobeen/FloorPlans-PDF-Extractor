@@ -1,5 +1,6 @@
 from boopnet import extract_from_pdf, extract_all_from_directory
 from boopnet.utilities import preprocess, postprocess, segmentation_model
+from inbac import inbac
 from pdf2image import convert_from_path
 from skimage import io
 from skimage.util import img_as_ubyte
@@ -110,10 +111,13 @@ class PDF_to_Floor_Plans:
         print("All Floor Plans Extracted Successfully!")
         
 
-# 
+class InbacPrompter:
+    def __init__(self):
+        inbac.main()
 
 
 if __name__ == '__main__':
-    agent = PDF_to_Floor_Plans('fp.pdf', 300, 'Images', 'Model_Images')
+    # agent = PDF_to_Floor_Plans('fp.pdf', 300, 'Images', 'Model_Images')
     # agent.pdf2images()
-    agent.detect_images()
+    # agent.detect_images()
+    inbac_agent = InbacPrompter()

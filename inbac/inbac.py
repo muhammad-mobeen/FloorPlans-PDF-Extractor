@@ -31,9 +31,10 @@ class Application():
 def main():
     root = tk.Tk()
     root.title("inbac")
-    app = Application(parse_args.parse_arguments(), master=root)
+    print('running')
+    # app = Application(parse_args.parse_arguments(), master=root)
 
-    app.run()
+    # app.run()
 
 
 if __name__ == "__main__":
